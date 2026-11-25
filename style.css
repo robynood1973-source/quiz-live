@@ -1,0 +1,19 @@
+*{box-sizing:border-box}body{margin:0;background:#101322;color:#f8f9ff;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.shell{max-width:1100px;margin:auto;padding:22px}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.brand{font-weight:1000;font-size:28px;letter-spacing:2px}.brand span{color:#8d7cff}.tag{color:#aab0ce;font-size:13px}
+.panel{background:#1b2035;border:1px solid #303854;border-radius:24px;padding:28px;margin:16px 0;box-shadow:0 18px 50px #0002}
+h1{font-size:clamp(30px,5vw,52px);margin:0 0 12px}h2{margin-top:0}p{color:#b9c0dc;line-height:1.6}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:28px}
+button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:14px 18px;font-weight:750}
+.tile{background:#282f4c;color:white;text-align:left;min-height:110px;border:1px solid #414b70}.tile b,.tile small{display:block}.tile small{color:#b6bedb;margin-top:10px;font-weight:500}
+.primary{background:#7865ff;color:white;width:100%;margin:12px 0}.ghost{background:#2a3049;color:#dce0f7;width:100%}
+label{display:block;margin:16px 0;color:#c6cce5;font-weight:600}input{display:block;width:100%;margin-top:8px;padding:14px;border-radius:12px;border:1px solid #414b70;background:#101526;color:white;font-size:18px}
+.hidden{display:none}.code{font-size:clamp(36px,8vw,70px);letter-spacing:8px;color:#a99eff;font-weight:1000;text-align:center}
+.bigQuestion{font-size:clamp(26px,4vw,44px);font-weight:850;text-align:center;margin:18px 0 28px}
+.answers{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.answer{min-height:90px;color:white;font-size:clamp(16px,2vw,22px);text-align:left}
+.answer:nth-child(1){background:#e84b66}.answer:nth-child(2){background:#287de0}.answer:nth-child(3){background:#269c72}.answer:nth-child(4){background:#e49b26}
+.answer:disabled{opacity:.55}.status{text-align:center;color:#aeb6d6;margin:16px}.topline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#b8c0df}
+.rank{display:flex;justify-content:space-between;padding:12px 15px;border-radius:12px;background:#262d47;margin:8px 0;font-weight:700}.rank:first-child{background:#4b3d70}
+.controls{display:flex;gap:10px;flex-wrap:wrap}.controls button{flex:1}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#fff;color:#111;padding:12px 18px;border-radius:12px;display:none;box-shadow:0 8px 35px #0005}
+.tvMode .shell{max-width:1500px}.tvMode .panel{padding:clamp(18px,3vw,44px)}.tvMode .brand{font-size:38px}
+@media(max-width:600px){.shell{padding:14px}.panel{padding:20px}.answers{grid-template-columns:1fr}.answer{min-height:70px}.tag{display:none}}

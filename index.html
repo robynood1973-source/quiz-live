@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quiz Live</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="shell">
+<header><div class="brand">QUIZ<span>LIVE</span></div><div class="tag">20 domande · Multiplayer</div></header>
+<section id="home" class="panel">
+<h1>Il tuo quiz, la tua serata.</h1><p>Tu conduci. Gli ospiti giocano dal telefono. La TV mostra la classifica.</p>
+<div class="tiles">
+<button class="tile" id="hostBtn"><b>🎮 Crea partita</b><small>Presentatore · cellulare o PC</small></button>
+<button class="tile" id="joinBtn"><b>📱 Partecipa</b><small>Inserisci il codice della partita</small></button>
+<button class="tile" id="tvBtn"><b>📺 Schermo TV</b><small>Mostra domande e classifica</small></button>
+</div></section>
+<section id="hostSetup" class="panel hidden"><h2>Crea partita</h2>
+<label>Numero massimo di giocatori <input id="maxPlayers" type="number" min="2" max="200" value="50"></label>
+<label>Secondi per ogni domanda <input id="seconds" type="number" min="5" max="90" value="20"></label>
+<button class="primary" id="createBtn">Crea e genera codice</button><button class="ghost back">Indietro</button></section>
+<section id="joinSetup" class="panel hidden"><h2>Entra nel quiz</h2>
+<label>Codice partita <input id="joinCode" maxlength="6" placeholder="ABC123"></label>
+<label>Il tuo nome <input id="playerName" maxlength="18" placeholder="Nome giocatore"></label>
+<button class="primary" id="joinSubmit">Entra</button><button class="ghost back">Indietro</button></section>
+<section id="tvSetup" class="panel hidden"><h2>Collega la TV</h2><p>Inserisci il codice creato dal presentatore.</p>
+<label>Codice partita <input id="tvCode" maxlength="6" placeholder="ABC123"></label>
+<button class="primary" id="tvSubmit">Apri schermo TV</button><button class="ghost back">Indietro</button></section>
+<section id="game" class="panel hidden"></section>
+<div id="toast" class="toast"></div>
+</main><script src="/socket.io/socket.io.js"></script><script src="app.js"></script></body></html>
